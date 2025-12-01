@@ -3,6 +3,7 @@ use tracing_subscriber::{EnvFilter, fmt, layer::SubscriberExt, util::SubscriberI
 use crate::harness::Harness;
 
 mod day_00_template;
+mod day_01;
 mod harness;
 mod utils;
 
@@ -23,6 +24,8 @@ fn main() -> anyhow::Result<()> {
         Harness::Run { day, part, .. } => match (day, part) {
             (0, 1) => day_00_template::part_1(&harness)?,
             (0, 2) => day_00_template::part_2(&harness)?,
+            (1, 1) => day_01::part_1(&harness)?,
+            (1, 2) => day_01::part_2(&harness)?,
             _ => anyhow::bail!("day {} part {} is not yet implemented", day, part),
         },
         _ => unreachable!(),
