@@ -1,0 +1,5 @@
+expected: 3
+comments: output the number of lines
+test
+example
+hello world

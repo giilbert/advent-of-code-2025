@@ -1,0 +1,3 @@
+expected: hello
+comments: reverse the input lines
+hello
