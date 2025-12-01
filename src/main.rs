@@ -4,6 +4,7 @@ use crate::harness::Harness;
 
 mod day_00_template;
 mod harness;
+mod utils;
 
 fn main() -> anyhow::Result<()> {
     const DEFAULT_LOG_SETTINGS: &str = "advent_of_code_2025=debug";
