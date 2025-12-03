@@ -4,6 +4,7 @@ use crate::harness::Harness;
 
 mod day_00_template;
 mod day_01;
+mod day_02;
 mod harness;
 mod utils;
 
@@ -26,6 +27,8 @@ fn main() -> anyhow::Result<()> {
             (0, 2) => day_00_template::part_2(&harness)?,
             (1, 1) => day_01::part_1(&harness)?,
             (1, 2) => day_01::part_2(&harness)?,
+            (2, 1) => day_02::part_1(&harness)?,
+            (2, 2) => day_02::part_2(&harness)?,
             _ => anyhow::bail!("day {} part {} is not yet implemented", day, part),
         },
         _ => unreachable!(),
