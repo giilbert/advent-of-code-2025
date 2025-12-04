@@ -56,10 +56,10 @@ impl Harness {
     }
 
     /// Get the input stripped of expected output and comments.
-    pub fn input(&self) -> anyhow::Result<String> {
-        let full_input = self.full_input()?;
+    pub fn input(&self) -> String {
+        let full_input = self.full_input().expect("failed to read full input");
         let input = full_input.lines().skip(2).collect::<Vec<_>>().join("\n");
-        Ok(input)
+        input
     }
 
     /// Check the provided output against the expected output in the input file.
@@ -86,7 +86,7 @@ impl Harness {
             Ok(())
         } else {
             tracing::error!(
-                "output does not match:\n     expected: {}\n     got: {}",
+                "output does not match:\n     expected: {}\n          got: {}",
                 expected,
                 got
             );

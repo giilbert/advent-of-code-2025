@@ -5,6 +5,7 @@ use crate::harness::Harness;
 mod day_00_template;
 mod day_01;
 mod day_02;
+mod day_03;
 mod harness;
 mod utils;
 
@@ -23,12 +24,14 @@ fn main() -> anyhow::Result<()> {
     let now = std::time::Instant::now();
     let result = match &harness {
         Harness::Run { day, part, .. } => match (day, part) {
-            (0, 1) => day_00_template::part_1(&harness)?,
-            (0, 2) => day_00_template::part_2(&harness)?,
-            (1, 1) => day_01::part_1(&harness)?,
-            (1, 2) => day_01::part_2(&harness)?,
-            (2, 1) => day_02::part_1(&harness)?,
-            (2, 2) => day_02::part_2(&harness)?,
+            (0, 1) => day_00_template::part_1(&harness),
+            (0, 2) => day_00_template::part_2(&harness),
+            (1, 1) => day_01::part_1(&harness),
+            (1, 2) => day_01::part_2(&harness),
+            (2, 1) => day_02::part_1(&harness),
+            (2, 2) => day_02::part_2(&harness),
+            (3, 1) => day_03::part_1(&harness),
+            (3, 2) => day_03::part_2(&harness),
             _ => anyhow::bail!("day {} part {} is not yet implemented", day, part),
         },
         _ => unreachable!(),

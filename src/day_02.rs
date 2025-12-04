@@ -1,8 +1,8 @@
 use crate::{harness::Harness, next_tuple};
 
-pub fn part_1(harness: &Harness) -> anyhow::Result<String> {
-    Ok(harness
-        .input()?
+pub fn part_1(harness: &Harness) -> String {
+    harness
+        .input()
         .split(",")
         .map(|range| {
             let iter = &mut range.split("-");
@@ -22,12 +22,12 @@ pub fn part_1(harness: &Harness) -> anyhow::Result<String> {
                 .sum::<u64>()
         })
         .sum::<u64>()
-        .to_string())
+        .to_string()
 }
 
-pub fn part_2(harness: &Harness) -> anyhow::Result<String> {
-    Ok(harness
-        .input()?
+pub fn part_2(harness: &Harness) -> String {
+    harness
+        .input()
         .split(",")
         .map(|range| {
             let iter = &mut range.split("-");
@@ -53,5 +53,5 @@ pub fn part_2(harness: &Harness) -> anyhow::Result<String> {
                 .sum::<u64>()
         })
         .sum::<u64>()
-        .to_string())
+        .to_string()
 }
