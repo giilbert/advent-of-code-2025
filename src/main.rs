@@ -7,6 +7,7 @@ mod day_01;
 mod day_02;
 mod day_03;
 mod day_04;
+mod day_05;
 mod harness;
 mod utils;
 
@@ -35,6 +36,8 @@ fn main() -> anyhow::Result<()> {
             (3, 2) => day_03::part_2(&harness),
             (4, 1) => day_04::part_1(&harness),
             (4, 2) => day_04::part_2(&harness),
+            (5, 1) => day_05::part_1(&harness),
+            (5, 2) => day_05::part_2(&harness),
             _ => anyhow::bail!("day {} part {} is not yet implemented", day, part),
         },
         _ => unreachable!(),
