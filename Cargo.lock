@@ -8,6 +8,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
+ "i256",
  "itertools",
  "rayon",
  "thiserror",
@@ -168,6 +169,12 @@ name = "heck"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
+
+[[package]]
+name = "i256"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a8ef3cf3581bc32d50c9e593ff6bad06c85054861ea6cc640660d73490c2c316"
 
 [[package]]
 name = "is_terminal_polyfill"
